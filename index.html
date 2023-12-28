@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/boss-72x72.png" />
+<link rel="apple-touch-icon" href="icons/boss-96x96.png" />
+<link rel="apple-touch-icon" href="icons/boss-128x128.png" />
+<link rel="apple-touch-icon" href="icons/boss-144x144.png" />
+<link rel="apple-touch-icon" href="icons/boss-152x152.png" />
+<link rel="apple-touch-icon" href="icons/boss-192x192.png" />
+<link rel="apple-touch-icon" href="icons/boss-384x384.png" />
+<link rel="apple-touch-icon" href="icons/boss-512x512.png" />
+<meta name="apple-mobile-web-app-status-bar" content="#fcffdf" />
+    <meta name="theme-color" content="#fcffdf" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+  
+    <link rel="stylesheet" href="style.css" />
+    <title>so_tired</title>
+  </head>
+  <body>
+    <audio src="assets/good-night.mp3"></audio>
+    <section id="title">
+      <span class="character">上</span>
+      <span class="character">班</span>
+      <span class="character">不</span>
+      <span class="character">要</span>
+      <span class="character">玩</span>
+    </section>
+
+    <button id="start">開<span id="back-word">始</span></button>
+    <p id="score"></p>
+    <p id="time"></p>
+    <img id="background" src="assets/desk.svg" alt="desk" />
+    <img id="background-middle" src="assets/desk-m.svg" alt="desk-m" />
+    <img id="background-mobile" src="assets/desk-v.svg" alt="desk-v" />
+    <section id="playground"></section>
+    <dialog id="panel">
+      <p id="final-score"></p>
+      <p id="performance"></p>
+      <button id="back">返回</button>
+      <button id="next-round">下一輪</button>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

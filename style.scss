@@ -1,0 +1,208 @@
+@mixin bg{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    position: relative;  
+    height: 100vh;
+    #background{
+       @include bg();
+       
+    }
+    #background-middle{
+        @include bg();
+    }
+    #background-mobile{
+        
+        @include bg();
+    }
+    #title{
+        position: absolute;
+        left: 30%;
+        top: 35%;
+        z-index: 1;
+        color: #fcffdf;
+        font-size: 5vw;
+        .character{
+            opacity: 0;
+        }
+    }
+    
+    
+    #start{
+        opacity: 0;
+        position: absolute;
+        left: 44%;
+        top: 60%;
+        z-index: 1;
+        font-size: 3vw;
+        font-weight: 700;
+        color: #040836;
+        background: none;
+        border: none;
+        cursor: pointer;
+        vertical-align: middle;
+        transition: 0.3s;
+        #back-word{
+            border-right: transparent 3px solid;
+        }
+        &:hover{
+            scale: 1.1;
+        }       
+    }
+    #score{
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 8%;
+        font-size: 5vw;
+        font-weight: 700;
+        color: #fcffdf;
+    }
+    #time{
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 16%;
+        font-size: 3vw;
+        font-weight: 700;
+        color: #fcffdf;
+    }
+    #playground{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    #panel{
+        position: absolute;
+        overflow: hidden;
+        left: calc(50% - 15vw);
+        top: calc(50% - 22.5vh);
+        width: 30%;
+        height: 45%;
+        border-radius: 5px;
+        box-shadow: 0px 1px 3px 2px #040836;
+        background-color: #fcffdf;
+        *{
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 25%;
+            font-size: 3vw;
+            font-weight: 700;
+            color: #040836;
+        }
+        button{
+            background: none;
+            border: none;
+            transition: 0.3s;
+            &:hover{
+                scale: 1.1;
+            }
+        }
+    }
+    .particle{
+        position: absolute;
+        box-shadow: 0px 1px 3px 2px #040836;
+        border-radius: 50%;
+        width: 5vw;
+        height: 5vw;
+        cursor: pointer;
+        animation: rot 1s linear alternate infinite;
+        background-size: 80%;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (width>=1200px){
+    body{
+        #background{
+            display: block;
+        }
+        #background-middle{
+            display: none;
+        }
+        #background-mobile{
+            display: none;
+        }
+    }    
+}
+@media screen and (700px <width< 1200px){
+    body{
+        #background{
+            display: none;
+        }
+        #background-middle{
+            display: block;
+        }
+        #background-mobile{
+            display: none;
+        }
+        #start{
+            left: 45%;
+            top: 58%;
+        }
+    }    
+}
+@media screen and (width<=700px){
+    body{
+        #background{
+            display: none;
+        }
+        #background-middle{
+            display: none;
+        }
+        #background-mobile{
+            display: block;
+        }
+        .particle{
+            width: 8vw;
+            height: 8vw;
+        }
+        #title{
+            font-size: 7vw;
+        }
+        #start{
+            font-size: 5vw;
+            left: 40%;
+        }
+        #panel{
+            width: 60%;
+            *{
+                font-size: 5vw;
+            }
+        }
+        #score{
+            font-size: 7vw;
+        }
+        #time{
+            font-size: 5vw;
+        }
+    }    
+}
+
+@keyframes bar {
+    50%{
+        border-right: #040836 3px solid;
+    }
+}
+
+@keyframes rot{
+    from{rotate: 30deg;}
+    to{rotate: -30deg;}
+}
