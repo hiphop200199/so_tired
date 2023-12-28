@@ -78,7 +78,7 @@ body #score {
   display: none;
   position: absolute;
   right: 5%;
-  top: 8%;
+  top: 15%;
   font-size: 5vw;
   font-weight: 700;
   color: #fcffdf;
@@ -87,7 +87,7 @@ body #time {
   display: none;
   position: absolute;
   right: 5%;
-  top: 16%;
+  top: 30%;
   font-size: 3vw;
   font-weight: 700;
   color: #fcffdf;
