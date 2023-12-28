@@ -175,8 +175,8 @@ body .particle {
     display: block;
   }
   body .particle {
-    width: 8vw;
-    height: 8vw;
+    width: 10vw;
+    height: 10vw;
   }
   body #title {
     font-size: 7vw;
@@ -186,6 +186,7 @@ body .particle {
     left: 40%;
   }
   body #panel {
+    left: calc(50% - 30vw);
     width: 60%;
   }
   body #panel * {

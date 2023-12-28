@@ -61,8 +61,15 @@ time.innerHTML=timeLeft;
                     
                  
  function generateParticle(){
-    let x = Math.random()*(window.innerWidth*0.97);
-    let y = Math.random()*(window.innerHeight - window.innerWidth*0.03);
+    let x=0;
+    let y =0;
+    if(window.innerWidth<=700){
+       x = Math.random()*(window.innerWidth*0.9);
+       y = Math.random()*(window.innerHeight - window.innerWidth*0.1);
+    }else{
+       x = Math.random()*(window.innerWidth*0.95);
+       y = Math.random()*(window.innerHeight - window.innerWidth*0.05);
+    }
     let picChoice = Math.random();
     let particle = document.createElement('div');
     particle.classList.add('particle');
