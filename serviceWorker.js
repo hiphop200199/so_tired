@@ -1,4 +1,4 @@
-const soTiredWebsite = "so-tired-site-v7"
+const soTiredWebsite = "so-tired-site-v8"
 const assets = [
   "/so_tired/",
   "/so_tired/index.html",
