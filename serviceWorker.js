@@ -1,19 +1,19 @@
 const soTiredWebsite = "so-tired-site-v3"
 const assets = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/script.js",
-  "/boss.svg",
-  "/assets/desk-m.svg",
-  "/assets/desk-v.svg",
-  "/assets/desk.svg",
-  "/assets/drink.svg",
-  "/assets/email.svg",
-  "/assets/tel.svg",
-  "/assets/fire_document.svg",
-  "/assets/good-night.mp3",
-  "/assets/mobile.svg",
+  "/so_tired/",
+  "/so_tired/index.html",
+  "/so_tired/style.css",
+  "/so_tired/script.js",
+  "/so_tired/assets/boss.svg",
+  "/so_tired/assets/desk-m.svg",
+  "/so_tired/assets/desk-v.svg",
+  "/so_tired/assets/desk.svg",
+  "/so_tired/assets/drink.svg",
+  "/so_tired/assets/email.svg",
+  "/so_tired/assets/tel.svg",
+  "/so_tired/assets/fire_document.svg",
+  "/so_tired/assets/good-night.mp3",
+  "/so_tired/assets/mobile.svg",
 ]
 
 self.addEventListener("install", installEvent => {
