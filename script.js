@@ -88,7 +88,7 @@ time.innerHTML=timeLeft;
     particle.style.backgroundSize='80%';
     particle.style.backgroundPosition='50% 70%';
   }
-    else if(picChoice>=0.65&&picChoice<0.95){particle.style.backgroundImage="url('assets/tel.svg')";
+    else if(picChoice>=0.65&&picChoice<0.96){particle.style.backgroundImage="url('assets/tel.svg')";
     particle.style.backgroundSize='80%';
     particle.style.backgroundPosition='50% 50%';
   }
@@ -133,7 +133,7 @@ function scoreRule(){
         break;
       case 'url("assets/drink.svg")':
         playground.removeChild(this);
-        timeLeft*=2;
+        timeLeft+=5;
         time.innerHTML=timeLeft;
         break;  
   }
