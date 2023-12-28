@@ -1,11 +1,11 @@
-/*if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
-      .register("serviceWorker.js")
+      .register("serviceWorker.js",{scope:"/so_tired/"})
       .then(res => console.log("service worker registered",res))
       .catch(err => console.log("service worker not registered", err))
   })
-}*/
+}
 window.addEventListener("load",()=>{
 const performances = ["熱炒魷魚!","主動一點啦!","這還差不多!","嗯，還可以","厚啦!給你調薪1%!"]; 
 let bgm = document.querySelector("audio");  
