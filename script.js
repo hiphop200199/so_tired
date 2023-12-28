@@ -156,6 +156,8 @@ function backToHomePage(){
     middlePanel.close();
     scorePoint=0;
     timeLeft=60;
+    score.innerHTML=scorePoint;
+    time.innerHTML=timeLeft;
     let bg = document.querySelectorAll('img');
     for(let i=0;i<bg.length;i++){
     bg[i].style.filter='none';
