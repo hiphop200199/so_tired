@@ -150,7 +150,7 @@ function startGame(){
   }
   bgm.play();
   gameTimerInterval = setInterval(checkGameProcess,1000);
-  generateParticleTimerInterval = setInterval(generateParticle,700); 
+  generateParticleTimerInterval = setInterval(generateParticle,600); 
 }
 function backToHomePage(){
     middlePanel.close();
@@ -166,7 +166,7 @@ function backToHomePage(){
     start.style.display='inline';
 }
 function checkGameProcess(){
-  if(timeLeft!=0){
+  if(timeLeft>0){
       timeLeft--;
       time.innerHTML=timeLeft;
     }else{
@@ -202,6 +202,6 @@ function readyForNextRound(){
     time.style.display='block';
     bgm.play();
   gameTimerInterval = setInterval(checkGameProcess,1000);
-  generateParticleTimerInterval = setInterval(generateParticle,700); 
+  generateParticleTimerInterval = setInterval(generateParticle,600); 
 }
 })
