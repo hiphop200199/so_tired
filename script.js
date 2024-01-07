@@ -1,11 +1,11 @@
-if ("serviceWorker" in navigator) {
+/*if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
       .register("serviceWorker.js",{scope:"/so_tired/"})
       .then(res => console.log("service worker registered",res))
       .catch(err => console.log("service worker not registered", err))
   })
-}
+}*/
 window.addEventListener("load",()=>{
 const performances = ["熱炒魷魚!","主動一點啦!","這還差不多!","嗯，還可以","厚啦!給你調薪1%!"]; 
 let bgm = document.querySelector("audio");  
@@ -13,6 +13,7 @@ let playground = document.getElementById("playground");
 let title = document.getElementById("title");
 let characters = document.querySelectorAll('.character');
 let backWord = document.getElementById("back-word");
+let fullScreen = document.getElementById("full-screen");
 let start = document.getElementById("start");
 let score = document.getElementById("score");
 let scorePoint = 0;
@@ -43,7 +44,8 @@ time.innerHTML=timeLeft;
 
 
              
-                
+ fullScreen.addEventListener('click',toggleFullScreen);               
+ fullScreen.addEventListener('touchstart',toggleFullScreen);               
  start.addEventListener("click",startGame);             
  start.addEventListener("touchstart",startGame);             
  back.addEventListener("click",backToHomePage);
@@ -59,7 +61,15 @@ time.innerHTML=timeLeft;
           
                   
 
-                    
+ function toggleFullScreen(){
+    if(document.fullscreenElement===null){
+      document.documentElement.requestFullscreen();
+      fullScreen.innerHTML='視窗';
+    }else{
+      document.exitFullscreen();
+      fullScreen.innerHTML='全螢幕';
+    }
+ }                   
                  
  function generateParticle(){
     let x=0;

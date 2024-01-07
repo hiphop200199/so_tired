@@ -53,6 +53,24 @@ body #title {
 body #title .character {
   opacity: 0;
 }
+body #full-screen {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  font-size: 3vw;
+  background: none;
+  border-radius: 5px;
+  background: #fcffdf;
+  color: #040836;
+  padding: 2px 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1;
+  transform-origin: 0% 100%;
+}
+body #full-screen:hover {
+  transform: skewX(-5deg);
+}
 body #start {
   opacity: 0;
   position: absolute;
