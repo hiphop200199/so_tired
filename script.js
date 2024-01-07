@@ -20,6 +20,7 @@ let time = document.getElementById("time");
 let timeLeft = 60;
 let gameTimerInterval;
 let generateParticleTimerInterval;
+let clearParticleInterval;
 let middlePanel = document.getElementById("panel");
 let finalScore = document.getElementById("final-score");
 let performance = document.getElementById("performance");
@@ -28,12 +29,12 @@ let nextRound = document.getElementById("next-round");
 for(let i=0;i<characters.length;i++){
   setTimeout(()=>{
     characters[i].style.opacity='1';
-  },i*500);
+  },i*300);
 }
 setTimeout(()=>{
   start.style.opacity='1';
   backWord.style.animation='bar 1s steps(1) infinite'
-},2500);
+},1500);
 
 score.innerHTML=scorePoint;
 time.innerHTML=timeLeft;
@@ -150,7 +151,8 @@ function startGame(){
   }
   bgm.play();
   gameTimerInterval = setInterval(checkGameProcess,1000);
-  generateParticleTimerInterval = setInterval(generateParticle,600); 
+  generateParticleTimerInterval = setInterval(generateParticle,250); 
+  clearParticleInterval = setInterval(clearParticle,1000);
 }
 function backToHomePage(){
     middlePanel.close();
@@ -172,6 +174,7 @@ function checkGameProcess(){
     }else{
       clearInterval(gameTimerInterval);
       clearInterval(generateParticleTimerInterval);
+      clearInterval(clearParticleInterval);
       bgm.pause();
      while(playground.children.length!=0){
       playground.removeChild(playground.firstElementChild);
@@ -191,6 +194,9 @@ function checkGameProcess(){
      middlePanel.showModal();
      }
 }
+function clearParticle(){
+  playground.removeChild(playground.firstElementChild);
+}
 
 function readyForNextRound(){
     middlePanel.close();
@@ -202,6 +208,7 @@ function readyForNextRound(){
     time.style.display='block';
     bgm.play();
   gameTimerInterval = setInterval(checkGameProcess,1000);
-  generateParticleTimerInterval = setInterval(generateParticle,600); 
+  generateParticleTimerInterval = setInterval(generateParticle,250); 
+  clearParticleInterval = setInterval(clearParticle,1000);
 }
 })

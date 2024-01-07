@@ -132,7 +132,7 @@ body .particle {
   width: 5vw;
   height: 5vw;
   cursor: pointer;
-  animation: rot 1s linear alternate infinite;
+  animation: rot 2s linear infinite;
   background-size: 80%;
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -175,8 +175,8 @@ body .particle {
     display: block;
   }
   body .particle {
-    width: 10vw;
-    height: 10vw;
+    width: 12vw;
+    height: 12vw;
   }
   body #title {
     font-size: 7vw;
@@ -205,10 +205,7 @@ body .particle {
   }
 }
 @keyframes rot {
-  from {
-    rotate: 30deg;
-  }
   to {
-    rotate: -30deg;
+    rotate: 1turn;
   }
 }/*# sourceMappingURL=style.css.map */
